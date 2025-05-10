@@ -68,6 +68,7 @@ function saveRecipesToStorage(recipes) {
 function initFormHandler() {
     const form = document.querySelector("form");
     form.addEventListener("submit", (event) => {
+        event.preventDefault();
         const formData = new FormData(form);
         const recipeObject = {};
         for (const [key, value] of formData.entries()) {
